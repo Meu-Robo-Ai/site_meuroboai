@@ -6,7 +6,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "start": "npx serve dist -s -l 3000"
+    "start": "vite preview --host 0.0.0.0 --port ${PORT:-3000} --strictPort",
+    "prestart": "npm run build"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
